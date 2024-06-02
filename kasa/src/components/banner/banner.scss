@@ -1,0 +1,23 @@
+@import '../../style/main.scss';
+
+.home_banner {
+    @include flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/home.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 30px;
+    height: 250px;
+    padding: 20px;
+    margin: 43px auto;
+    @media screen and (max-width: 550px){
+        margin: 20px auto;
+        height: 120px;
+    }
+    span{
+        color: $primary;
+        font-size: clamp(20px, 4vw, 48px);
+        font-weight: 500;
+    }
+}
