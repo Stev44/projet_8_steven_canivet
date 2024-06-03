@@ -7,13 +7,17 @@ import SlideShow from '../../components/slideshow/slideshow'
 
 function Accomodation() {
   const { id } = useParams()
-  const accomodation = data.filter((content) => content.id === id)
-  const description = accomodation[0].description
-  const equipments = accomodation[0].equipments
+  const [description, setDescription] = useState('')
+  const [equipments, setEquipments] = useState([])
   const [slide, setSlide] = useState([])
 
   useEffect(() => {
-    setSlide(accomodation[0].pictures)
+    const accomodation = data.find((content) => content.id === id)
+    if (accomodation) {
+      setDescription(accomodation.description)
+      setEquipments(accomodation.equipments)
+      setSlide(accomodation.pictures)
+    }
   }, [id])
 
   return (
