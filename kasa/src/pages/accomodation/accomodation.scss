@@ -1,0 +1,13 @@
+@import '../../style/main.scss';
+
+.accomodation {
+  &_collapse {
+    @include flex(row, space-between, flex-start);
+    width: 90%;
+    gap: 100px;
+    margin: 0 auto;
+  }
+  &_content {
+    width: 100%;
+  }
+}

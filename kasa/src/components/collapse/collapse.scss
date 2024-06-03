@@ -1,0 +1,36 @@
+@import '../../style/main.scss';
+
+.collapse {
+  width: 100%;
+  &_title {
+    @include flex(row, space-between);
+    padding: 20px;
+    background-color: $secondary;
+    font-size: clamp(15px, 2vw, 22px);
+    border-radius: 10px;
+    color: $primary;
+  }
+  .icon {
+    &_down {
+      transform: rotate(180deg);
+    }
+    &_up {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.content {
+  &_active {
+    visibility: visible;
+    padding: 20px;
+    background-color: $tertiary;
+    color: $secondary;
+    font-size: clamp(12px, 2vw, 20px);
+    line-height: 150%;
+    height: 220px;
+  }
+  &_hidden {
+    visibility: hidden;
+  }
+}
