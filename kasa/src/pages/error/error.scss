@@ -1,0 +1,32 @@
+@import '../../style/main.scss';
+
+.error {
+  @include flex(column, space-between, center);
+  height: 70vh;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  color: $secondary;
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+    padding-top: 40px;
+  }
+  &_title {
+    font-weight: 700;
+    font-size: 288px;
+    @media screen and (max-width: 768px) {
+      font-size: 150px;
+    }
+  }
+  &_content {
+    font-weight: 500;
+    font-size: clamp(20px, 2.5vw, 36px);
+    text-align: center;
+  }
+  &_home {
+    font-weight: 500;
+    font-size: clamp(12px, 2.5vw, 18px);
+    text-decoration: underline;
+    text-align: center;
+  }
+}

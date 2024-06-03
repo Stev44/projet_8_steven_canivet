@@ -2,15 +2,21 @@
 
 .collapse {
   width: 100%;
+  overflow: hidden;
   &_title {
     @include flex(row, space-between);
     padding: 20px;
+    position: relative;
+    z-index: 10;
     background-color: $secondary;
     font-size: clamp(15px, 2vw, 22px);
     border-radius: 10px;
+    user-select: none;
     color: $primary;
   }
   .icon {
+    font-size: 30px;
+    transition: 0.4s;
     &_down {
       transform: rotate(180deg);
     }
@@ -21,16 +27,38 @@
 }
 
 .content {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  background-color: $tertiary;
+  color: $secondary;
+  font-size: clamp(12px, 2vw, 20px);
+  line-height: 150%;
+  user-select: none;
+  height: 220px;
   &_active {
-    visibility: visible;
-    padding: 20px;
-    background-color: $tertiary;
-    color: $secondary;
-    font-size: clamp(12px, 2vw, 20px);
-    line-height: 150%;
-    height: 220px;
+    animation: translate 0.2s both;
   }
   &_hidden {
-    visibility: hidden;
+    animation: opacity 0.2s both;
+  }
+}
+
+@keyframes translate {
+  0% {
+    transform: translateY(-220px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-220px);
   }
 }

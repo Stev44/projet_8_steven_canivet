@@ -1,0 +1,28 @@
+@import '../../style/main.scss';
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  min-height: 450px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 25px;
+  &_arrow_left {
+    left: 10px;
+    position: absolute;
+  }
+  &_arrow_right {
+    right: 10px;
+    position: absolute;
+  }
+  &_counter {
+    position: absolute;
+    bottom: 10px;
+    color: $primary;
+  }
+}
