@@ -36,29 +36,12 @@
   font-size: clamp(12px, 2vw, 20px);
   line-height: 150%;
   user-select: none;
-  height: 220px;
   &_active {
-    animation: translate 0.2s both;
+    transform: translateY(0px);
+    transition: 0.4s ease;
   }
   &_hidden {
-    animation: opacity 0.2s both;
-  }
-}
-
-@keyframes translate {
-  0% {
-    transform: translateY(-220px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes opacity {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-220px);
+    transform: translateY(-100%);
+    transition: 0.4s ease;
   }
 }

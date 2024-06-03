@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import data from '../../datas/data'
 import Collapse from '../../components/collapse/collapse'

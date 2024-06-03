@@ -15,8 +15,12 @@
     height: 120px;
   }
   &_home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url('../../assets/home.jpg');
+  }
+  &_about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../../assets/about.jpg');
   }
   span {
     color: $primary;
