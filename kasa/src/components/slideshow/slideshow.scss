@@ -12,17 +12,31 @@
   background-position: center;
   position: relative;
   border-radius: 25px;
-  &_arrow_left {
-    left: 10px;
-    position: absolute;
+  @media screen and (max-width: 500px) {
+    min-height: 350px;
+    border-radius: 15px;
   }
-  &_arrow_right {
-    right: 10px;
-    position: absolute;
+  &_arrow {
+    font-size: 90px;
+    color: $primary;
+    @media screen and (max-width: 500px) {
+      font-size: 40px;
+    }
+    &_left {
+      left: 10px;
+      position: absolute;
+    }
+    &_right {
+      right: 10px;
+      position: absolute;
+    }
   }
   &_counter {
     position: absolute;
     bottom: 10px;
     color: $primary;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 }

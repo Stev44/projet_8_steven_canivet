@@ -28,10 +28,12 @@ function Infos({ title, name, picture, rating, location, tags }) {
             <span>{name[0]}</span>
             <span>{name[1]}</span>
           </div>
-          <img src={picture} alt={name} />
+          <div className="infos_host_profile_picture">
+            <img src={picture} alt={name} />
+          </div>
         </div>
         <div className="infos_host_rating">
-          {Array.from({ length: totalStars }, (_, index) => {
+          {Array.from({ length: totalStars }, (star, index) => {
             const ratingValue = index + 1
             return (
               <FontAwesomeIcon

@@ -9,22 +9,21 @@
   border-radius: 30px;
   height: 250px;
   padding: 20px;
-  margin: 0 auto;
-  @media screen and (max-width: 550px) {
-    margin: 0px auto;
+  @media screen and (max-width: 500px) {
     height: 120px;
+    border-radius: 15px;
   }
   &_home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url('../../assets/home.jpg');
+    span {
+      color: $primary;
+      font-size: clamp(24px, 4vw, 48px);
+      font-weight: 500;
+    }
   }
   &_about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url('../../assets/about.jpg');
-  }
-  span {
-    color: $primary;
-    font-size: clamp(20px, 4vw, 48px);
-    font-weight: 500;
   }
 }

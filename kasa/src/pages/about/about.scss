@@ -2,9 +2,16 @@
 
 .about {
   margin-top: 60px;
+  @media screen and (max-width: 500px) {
+    margin-top: 20px;
+  }
   &_collapse {
     @include flex(column, space-between, center);
     width: 70%;
     margin: 0 auto;
+    @media screen and (max-width: 500px) {
+      width: 90%;
+      gap: 0;
+    }
   }
 }

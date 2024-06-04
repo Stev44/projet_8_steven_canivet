@@ -13,10 +13,16 @@
     border-radius: 10px;
     user-select: none;
     color: $primary;
+    @media screen and (max-width: 500px) {
+      padding: 10px;
+    }
   }
   .icon {
     font-size: 30px;
     transition: 0.4s;
+    @media screen and (max-width: 500px) {
+      font-size: 22px;
+    }
     &_down {
       transform: rotate(180deg);
     }
@@ -39,9 +45,11 @@
   &_active {
     transform: translateY(0px);
     transition: 0.4s ease;
+    height: auto;
   }
   &_hidden {
-    transform: translateY(-100%);
+    transform: translateY(-220px);
     transition: 0.4s ease;
+    height: 0;
   }
 }

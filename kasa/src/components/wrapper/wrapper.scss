@@ -8,6 +8,11 @@
   border-radius: 25px;
   margin-bottom: 60px;
   margin-top: 60px;
+  @media screen and (max-width: 500px) {
+    background-color: $primary;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   &_card {
     display: grid;
     grid-template-rows: 340px 340px;
@@ -18,5 +23,10 @@
     padding: 60px;
     align-items: center;
     justify-items: center;
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      row-gap: 20px;
+    }
   }
 }

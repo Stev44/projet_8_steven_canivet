@@ -1,5 +1,6 @@
-import arrowLeft from '../../assets/arrow_left.png'
-import arrowRight from '../../assets/arrow_right.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import './slideshow.scss'
 import { useState } from 'react'
 
@@ -17,11 +18,11 @@ function SlideShow({ slide }) {
   }
   return (
     <div style={{ backgroundImage: `url(${slide[update]})` }} className="slide">
-      <div className="slide_arrow_left" onClick={prevSlide}>
-        <img src={arrowLeft} alt="flèche gauche" />
+      <div className="slide_arrow slide_arrow_left" onClick={prevSlide}>
+        <FontAwesomeIcon icon={faAngleLeft} />
       </div>
-      <div className="slide_arrow_right" onClick={nextSlide}>
-        <img src={arrowRight} alt="flèche droite" />
+      <div className="slide_arrow slide_arrow_right" onClick={nextSlide}>
+        <FontAwesomeIcon icon={faAngleRight} />
       </div>
       <div className="slide_counter">
         <p>
