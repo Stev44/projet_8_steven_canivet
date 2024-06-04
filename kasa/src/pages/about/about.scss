@@ -1,6 +1,7 @@
 @import '../../style/main.scss';
 
 .about {
+  margin-top: 60px;
   &_collapse {
     @include flex(column, space-between, center);
     width: 70%;

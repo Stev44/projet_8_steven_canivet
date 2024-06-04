@@ -3,7 +3,8 @@ import Logo from '../../assets/logo.png'
 import './header.scss'
 
 function Header() {
-    return (
+  return (
+    <header>
       <nav className="nav">
         <div>
           <img className="nav_image" src={Logo} alt="Logo Kasa" />
@@ -13,8 +14,8 @@ function Header() {
           <Link to={'/about'}>À propos</Link>
         </div>
       </nav>
-    )
-  }
-  
-  export default Header
-  
+    </header>
+  )
+}
+
+export default Header

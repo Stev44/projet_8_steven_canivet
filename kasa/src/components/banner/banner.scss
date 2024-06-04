@@ -9,9 +9,9 @@
   border-radius: 30px;
   height: 250px;
   padding: 20px;
-  margin: 43px auto;
+  margin: 0 auto;
   @media screen and (max-width: 550px) {
-    margin: 20px auto;
+    margin: 0px auto;
     height: 120px;
   }
   &_home {

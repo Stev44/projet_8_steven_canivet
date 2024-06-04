@@ -3,10 +3,10 @@ import Wrapper from '../../components/wrapper/wrapper'
 
 function Home() {
   return (
-    <div>
+    <main>
       <Banner />
       <Wrapper />
-    </div>
+    </main>
   )
 }
 

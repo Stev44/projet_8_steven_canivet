@@ -18,6 +18,13 @@ body {
   }
 }
 
+main {
+  padding-top: 40px;
+  @media screen and (max-width: 500px) {
+    padding-top: 20px;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;

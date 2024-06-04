@@ -4,8 +4,8 @@ import data from '../../datas/data'
 
 function Wrapper() {
   return (
-    <main className="wrapper">
-      <section className="wrapper_card">
+    <section className="wrapper">
+      <div className="wrapper_card">
         {data.map((data) => {
           return (
             <Card
@@ -16,8 +16,8 @@ function Wrapper() {
             />
           )
         })}
-      </section>
-    </main>
+      </div>
+    </section>
   )
 }
 

@@ -5,9 +5,9 @@ import './about.scss'
 
 function About() {
   return (
-    <body>
+    <main>
       <Banner />
-      <main>
+      <section className="about">
         {aboutData.map((data) => {
           return (
             <div key={data.id} className="about_collapse">
@@ -15,8 +15,8 @@ function About() {
             </div>
           )
         })}
-      </main>
-    </body>
+      </section>
+    </main>
   )
 }
 

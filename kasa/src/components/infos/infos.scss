@@ -1,0 +1,57 @@
+@import '../../style/main.scss';
+
+.infos {
+  @include flex(row, space-between, center);
+  width: 90%;
+  margin: 0 auto;
+  color: $secondary;
+  padding: 30px 0 30px 0;
+  &_location {
+    @include flex(column, space-between, flex-start);
+    gap: 25px;
+  }
+  &_location_title {
+    @include flex(column, center, flex-start);
+    gap: 5px;
+    h2 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  &_location_tags {
+    @include flex;
+    gap: 10px;
+    font-size: 14px;
+    color: $primary;
+    span {
+      border-radius: 10px;
+      padding: 5px 30px 5px 30px;
+      background-color: $secondary;
+    }
+  }
+  &_host {
+    @include flex(column);
+    gap: 25px;
+    &_profile {
+      @include flex(row, flex-end);
+      gap: 15px;
+      &_name {
+        @include flex(column, center, flex-end);
+        font-size: 18px;
+        gap: 5px;
+      }
+      img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+      }
+    }
+    &_rating {
+      @include flex(row, flex-end);
+      gap: 10px;
+      font-size: 24px;
+    }
+  }
+}

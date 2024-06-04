@@ -17,10 +17,7 @@ function SlideShow({ slide }) {
     if (update === 0) setUpdate(slide.length - 1)
   }
   return (
-    <section
-      style={{ backgroundImage: `url(${slide[update]})` }}
-      className="slide"
-    >
+    <div style={{ backgroundImage: `url(${slide[update]})` }} className="slide">
       <div className="slide_arrow_left" onClick={prevSlide}>
         <img src={arrowLeft} alt="flèche gauche" />
       </div>
@@ -32,7 +29,7 @@ function SlideShow({ slide }) {
           {update + 1}/{slide.length}
         </p>
       </div>
-    </section>
+    </div>
   )
 }
 
