@@ -19,6 +19,7 @@
   &_arrow {
     font-size: 90px;
     color: $primary;
+    cursor: pointer;
     @media screen and (max-width: 500px) {
       font-size: 40px;
     }
@@ -35,6 +36,7 @@
     position: absolute;
     bottom: 10px;
     color: $primary;
+    user-select: none;
     @media screen and (max-width: 500px) {
       display: none;
     }
