@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 function SlideShow({ slide }) {
   const [update, setUpdate] = useState(0)
-  console.log(slide.length)
 
   const nextSlide = () => {
     setUpdate(update + 1)

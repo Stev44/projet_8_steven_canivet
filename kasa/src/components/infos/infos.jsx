@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 function Infos({ title, name, picture, rating, location, tags }) {
+  const totalStars = 5
+
   return (
     <div className="infos">
       <div className="infos_location">
@@ -29,11 +31,20 @@ function Infos({ title, name, picture, rating, location, tags }) {
           <img src={picture} alt={name} />
         </div>
         <div className="infos_host_rating">
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
+          {Array.from({ length: totalStars }, (_, index) => {
+            const ratingValue = index + 1
+            return (
+              <FontAwesomeIcon
+                icon={faStar}
+                key={index}
+                className={
+                  ratingValue <= rating
+                    ? 'infos_host_rating_red'
+                    : 'infos_host_rating_grey'
+                }
+              />
+            )
+          })}
         </div>
       </div>
     </div>

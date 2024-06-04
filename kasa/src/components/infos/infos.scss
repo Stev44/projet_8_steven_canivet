@@ -32,10 +32,10 @@
     }
   }
   &_host {
-    @include flex(column);
+    @include flex(column, center, flex-end);
     gap: 25px;
     &_profile {
-      @include flex(row, flex-end);
+      @include flex(row);
       gap: 15px;
       &_name {
         @include flex(column, center, flex-end);
@@ -50,8 +50,14 @@
     }
     &_rating {
       @include flex(row, flex-end);
-      gap: 10px;
+      gap: 15px;
       font-size: 24px;
+      &_red {
+        color: $secondary;
+      }
+      &_grey {
+        color: #e3e3e3;
+      }
     }
   }
 }
