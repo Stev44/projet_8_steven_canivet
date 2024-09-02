@@ -23,8 +23,12 @@
     padding: 60px;
     align-items: center;
     justify-items: center;
-    @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr);
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr); // 2 colonnes si moins d'espace
+    }
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr; // 1 colonne sur petits écrans
       padding: 0;
       row-gap: 20px;
     }
