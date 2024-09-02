@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/projet_8_steven_canivet/static/css/main.d202c2f7.css",
+    "main.js": "/projet_8_steven_canivet/static/js/main.6a0dfedf.js",
+    "static/media/about.jpg": "/projet_8_steven_canivet/static/media/about.796d007cebdd47cc489b.jpg",
+    "static/media/home.jpg": "/projet_8_steven_canivet/static/media/home.0f820b85d9a6a7e177b3.jpg",
+    "index.html": "/projet_8_steven_canivet/index.html",
+    "main.d202c2f7.css.map": "/projet_8_steven_canivet/static/css/main.d202c2f7.css.map",
+    "main.6a0dfedf.js.map": "/projet_8_steven_canivet/static/js/main.6a0dfedf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d202c2f7.css",
+    "static/js/main.6a0dfedf.js"
+  ]
+}
