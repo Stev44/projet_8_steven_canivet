@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import data from '../../datas/data'
 import Collapse from '../../components/collapse/collapse'
 import './accomodation.scss'
@@ -8,6 +8,7 @@ import Infos from '../../components/infos/infos'
 
 function Accomodation() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [description, setDescription] = useState('')
   const [equipments, setEquipments] = useState([])
   const [slide, setSlide] = useState([])
@@ -20,6 +21,7 @@ function Accomodation() {
 
   useEffect(() => {
     const accomodation = data.find((content) => content.id === id)
+
     if (accomodation) {
       setDescription(accomodation.description)
       setEquipments(accomodation.equipments)
@@ -30,8 +32,10 @@ function Accomodation() {
       setPicture(accomodation.host.picture)
       setTitle(accomodation.title)
       setName(accomodation.host.name.split(' '))
+    } else {
+      navigate('*')
     }
-  }, [id])
+  }, [id, navigate])
 
   return (
     <main className="accomodation">
