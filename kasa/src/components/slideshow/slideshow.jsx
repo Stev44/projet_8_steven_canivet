@@ -18,17 +18,21 @@ function SlideShow({ slide }) {
   }
   return (
     <div style={{ backgroundImage: `url(${slide[update]})` }} className="slide">
-      <div className="slide_arrow slide_arrow_left" onClick={prevSlide}>
-        <FontAwesomeIcon icon={faAngleLeft} />
-      </div>
-      <div className="slide_arrow slide_arrow_right" onClick={nextSlide}>
-        <FontAwesomeIcon icon={faAngleRight} />
-      </div>
-      <div className="slide_counter">
-        <p>
-          {update + 1}/{slide.length}
-        </p>
-      </div>
+      {slide.length > 1 && (
+        <div>
+          <div className="slide_arrow slide_arrow_left" onClick={prevSlide}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </div>
+          <div className="slide_arrow slide_arrow_right" onClick={nextSlide}>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </div>
+          <div className="slide_counter">
+            <p>
+              {update + 1}/{slide.length}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
